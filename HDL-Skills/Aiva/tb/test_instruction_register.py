@@ -10,6 +10,7 @@ async def reset(uut, reset_duration=randint(1,10)):
     uut.rst.value = 1
     await ClockCycles(uut.clk, reset_duration)
     uut.rst.value = 0
+    uut.en.value = 0
 
 @cocotb.test()
 async def test_instruction_register_sanity(uut):
@@ -21,6 +22,15 @@ async def test_instruction_register_sanity(uut):
     # reset the module
     await reset(uut)
     await RisingEdge(uut.clk)
+
+    uut.en.value = 1
+    uut.curr_wrd.value = 128
+    await RisingEdge(uut.clk)
+    uut.curr_wrd.value = 16
+    await RisingEdge(uut.clk)
+    uut.curr_wrd.value = 47
+    await RisingEdge(uut.clk)
+    uut.curr_wrd.value = 213
 
     # continue test ...
     await ClockCycles(uut.clk, 100)

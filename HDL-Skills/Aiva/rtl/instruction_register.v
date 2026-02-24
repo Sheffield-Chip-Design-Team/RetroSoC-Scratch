@@ -31,7 +31,7 @@ always @(posedge clk) begin
 
   end else begin
 
-    if (en && (wrd_counter <= opcode_len)) begin
+    if (en && (wrd_counter < opcode_len)) begin
 
       case (wrd_counter)
 
