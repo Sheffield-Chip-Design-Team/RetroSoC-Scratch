@@ -18,7 +18,7 @@ end
 
 always @(posedge clk) begin
   if (cs & !we) begin
-    tmp_data <= data;
+    tmp_data <= mem[addr_in];
   end
 end
 
