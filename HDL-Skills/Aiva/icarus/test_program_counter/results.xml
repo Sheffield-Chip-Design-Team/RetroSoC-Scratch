@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1771879073" />
+    <testcase name="test_program_counter_sanity" classname="test_program_counter" file="/home/aaiva/Git-Repos/RetroSoC/RetroSoC-Scratch/HDL-Skills/Aiva/tb/test_program_counter.py" lineno="14" time="0.006834745407104492" sim_time_ns="4240.0" ratio_time="620359.6107022011" />
+  </testsuite>
+</testsuites>
