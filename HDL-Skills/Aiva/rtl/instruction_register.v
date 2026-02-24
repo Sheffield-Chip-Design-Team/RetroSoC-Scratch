@@ -4,7 +4,7 @@ module instruction_register (
   input   wire          en,
   input         [7:0]   curr_wrd,
   output        [23:0]  opcode,
-  output  reg   [0:0]   op_rdy
+  output  wire          op_rdy
 );
 
 reg [7:0] word_a;
@@ -13,10 +13,11 @@ reg [7:0] word_c;
 
 reg   [1:0] wrd_counter;
 
-assign  opcode  = {word_a, word_b, word_c};
-assign  op_rdy = (wrd_counter > opcode_len);
+wire  [1:0] opcode_len = word_a[7:6] + 1;
 
-wire    opcode_len
+assign  opcode  = {word_a, word_b, word_c};
+assign  op_rdy = {wrd_counter > opcode_len};
+
 assign  opcode_len = word_a[7:6] + 1;
 
 always @(posedge clk) begin
@@ -27,7 +28,6 @@ always @(posedge clk) begin
     word_c  <=  0;
     
     wrd_counter  <=  0;
-    opcode_len   <=  3;
 
   end else begin
 
