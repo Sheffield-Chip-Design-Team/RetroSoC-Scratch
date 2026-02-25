@@ -16,8 +16,7 @@ Instead, use hyphens or underscores (-, _)
 Inside of your git-repositories folder, make a new folder for this repository.
 My file structure is as follows, but you can name your folders and files whatever you want as long as you change the following commands accordingly:
 
-`> Git-Repos`
-`   > RetroSoC Scratch`
+`> Git-Repos -> RetroSoC-Scratch`
 
 Once you have created the folder you want the repository to be cloned to, right click on it and press copy path.
 Now you can run the following command to clone the repository onto your system:
