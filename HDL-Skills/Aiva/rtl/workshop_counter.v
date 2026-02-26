@@ -6,21 +6,23 @@ module workshop_counter (
   input [3:0] data_in,
   output reg [3:0] data_out
 );
-
-always @(posedge clk) begin
+  
+always @(posedge clk or posedge rst) begin
 
   if (en) begin
-    data_out <= data_out + 1;
-  end
 
-  if (rst) begin
-    data_out <= 0;
+    if (rst) begin
+      data_out <= 0;
+    end else begin
+      if (load) begin
+        data_out <= data_in;
+      end else begin
+        data_out <= data_out + 1;
+      end
+    end
+    
   end
-
-  if (load) begin
-    data_out <= data_in;
-  end
-
-end
   
+end
+ 
 endmodule
