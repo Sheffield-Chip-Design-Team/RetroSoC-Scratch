@@ -10,8 +10,8 @@ module program_counter_wtb;
   reg   rst;
   reg   en;
   reg   branch_en;
-  reg  [3:0] next_instr_addr;
-  wire [3:0] curr_instr_addr;
+  reg  [8:0] next_instr_addr;
+  wire [8:0] curr_instr_addr;
 
 program_counter dut (
       .clk(clk),
