@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1772114152" />
+    <testcase name="test_counter_sanity" classname="test_counter" file="/home/amr/GitReposNStuff/RetroSoC/retroSoC-Scratch/HDL-Skills/Amber_Bobby_/TB/test_counter.py" lineno="18" time="0.010389328002929688" sim_time_ns="4880.0" ratio_time="469712.7666605471" />
+  </testsuite>
+</testsuites>
