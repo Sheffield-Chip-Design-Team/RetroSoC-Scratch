@@ -1,7 +1,7 @@
 module decoder (
-  input wire op_rdy,
   input wire rst,
   input wire clk,
+  input wire op_rdy,
   input [23:0] opcode,
   output wire pc_en,
   output wire load_en

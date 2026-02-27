@@ -1,6 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1772195122" />
-    <testcase name="test_decoder_sanity" classname="test_decoder" file="/home/aaiva/Git-Repos/RetroSoC/RetroSoC-Scratch/HDL-Skills/Aiva/tb/test_decoder.py" lineno="16" time="0.006589651107788086" sim_time_ns="4560.0" ratio_time="691994.1474004125" />
+    <property name="random_seed" value="1772207243" />
+    <testcase name="test_multi_module_sanity" classname="test_multi_module" file="/home/aaiva/git-repos/RetroSoC-Scratch/HDL-Skills/Aiva/tb/test_multi_module.py" lineno="24" time="0.003820657730102539" sim_time_ns="4160.0" ratio_time="1088817.7622464898" />
   </testsuite>
 </testsuites>

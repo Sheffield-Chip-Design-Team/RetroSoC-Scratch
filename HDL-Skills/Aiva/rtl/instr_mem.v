@@ -10,18 +10,16 @@ module instr_mem (
 reg [7:0] tmp_data;
 reg [7:0] mem [255:0];
 
+assign data = cs & oe & !we ? tmp_data  : 'hz;
+
 always @(posedge clk) begin
   if (cs & we) begin
     mem[addr_in] <= data;
   end
-end
-
-always @(posedge clk) begin
   if (cs & !we) begin
     tmp_data <= mem[addr_in];
   end
 end
 
-assign data = cs & oe & !we ? tmp_data  : 'hz;
 
 endmodule
