@@ -1,20 +1,20 @@
      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /home/aaiva/Coraltb/.env/bin/python3
      -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
      0.00ns INFO     cocotb                             Running on Icarus Verilog version 12.0 (stable)
-     0.00ns INFO     cocotb                             Seeding Python random module with 1772114140
+     0.00ns INFO     cocotb                             Seeding Python random module with 1772195122
      0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /home/aaiva/Coraltb/.env/lib/python3.12/site-packages/cocotb
      0.00ns INFO     cocotb                             Running tests
-     0.00ns INFO     cocotb.regression                  running test_workshop_counter.test_workshop_counter_sanity (1/1)
-     0.00ns WARNING  py.warnings                        /home/aaiva/Git-Repos/RetroSoC/RetroSoC-Scratch/HDL-Skills/Aiva/tb/test_workshop_counter.py:21: DeprecationWarning: The 'units' argument has been renamed to 'unit'.
+     0.00ns INFO     cocotb.regression                  running test_decoder.test_decoder_sanity (1/1)
+     0.00ns WARNING  py.warnings                        /home/aaiva/Git-Repos/RetroSoC/RetroSoC-Scratch/HDL-Skills/Aiva/tb/test_decoder.py:19: DeprecationWarning: The 'units' argument has been renamed to 'unit'.
                                                           clock = Clock(uut.clk, 40, units="ns")
-     0.00ns INFO     cocotb.workshop_counter_wtb        Resetting Module
-  4880.00ns INFO     cocotb.workshop_counter_wtb        Test Complete!
-  4880.00ns INFO     cocotb.regression                  test_workshop_counter.test_workshop_counter_sanity passed
-  4880.00ns INFO     cocotb.regression                  ************************************************************************************************************
-                                                        ** TEST                                                STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
-                                                        ************************************************************************************************************
-                                                        ** test_workshop_counter.test_workshop_counter_sanity   PASS        4880.00           0.01     880466.45  **
-                                                        ************************************************************************************************************
-                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                     4880.00           0.01     791347.52  **
-                                                        ************************************************************************************************************
-FST info: dumpfile /home/aaiva/Git-Repos/RetroSoC/RetroSoC-Scratch/HDL-Skills/Aiva/tb_out/icarus/build/workshop_counter_wtb.fst opened for output.
+     0.00ns INFO     cocotb.decoder_wtb                 Resetting Module
+  4560.00ns INFO     cocotb.decoder_wtb                 Test Complete!
+  4560.00ns INFO     cocotb.regression                  test_decoder.test_decoder_sanity passed
+  4560.00ns INFO     cocotb.regression                  ******************************************************************************************
+                                                        ** TEST                              STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ******************************************************************************************
+                                                        ** test_decoder.test_decoder_sanity   PASS        4560.00           0.01     691994.15  **
+                                                        ******************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                   4560.00           0.01     622085.75  **
+                                                        ******************************************************************************************
+FST info: dumpfile /home/aaiva/Git-Repos/RetroSoC/RetroSoC-Scratch/HDL-Skills/Aiva/tb_out/icarus/build/decoder_wtb.fst opened for output.

@@ -1,6 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1772114140" />
-    <testcase name="test_workshop_counter_sanity" classname="test_workshop_counter" file="/home/aaiva/Git-Repos/RetroSoC/RetroSoC-Scratch/HDL-Skills/Aiva/tb/test_workshop_counter.py" lineno="18" time="0.0055425167083740234" sim_time_ns="4880.0" ratio_time="880466.4481438465" />
+    <property name="random_seed" value="1772195122" />
+    <testcase name="test_decoder_sanity" classname="test_decoder" file="/home/aaiva/Git-Repos/RetroSoC/RetroSoC-Scratch/HDL-Skills/Aiva/tb/test_decoder.py" lineno="16" time="0.006589651107788086" sim_time_ns="4560.0" ratio_time="691994.1474004125" />
   </testsuite>
 </testsuites>

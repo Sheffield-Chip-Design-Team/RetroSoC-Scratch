@@ -1,6 +1,0 @@
-<testsuites name="results">
-  <testsuite name="all" package="all">
-    <property name="random_seed" value="1771977234" />
-    <testcase name="test_instruction_register_sanity" classname="test_instr_mem" file="/home/aaiva/Git-Repos/RetroSoC/RetroSoC-Scratch/HDL-Skills/Aiva/tb/test_instr_mem.py" lineno="18" time="0.037429094314575195" sim_time_ns="24840.0" ratio_time="663654.8507220251" />
-  </testsuite>
-</testsuites>
