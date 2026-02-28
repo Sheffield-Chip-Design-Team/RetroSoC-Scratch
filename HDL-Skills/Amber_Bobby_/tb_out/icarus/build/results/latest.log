@@ -1,20 +1,20 @@
      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /home/aaiva/Coraltb/.env/bin/python3
      -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
      0.00ns INFO     cocotb                             Running on Icarus Verilog version 12.0 (stable)
-     0.00ns INFO     cocotb                             Seeding Python random module with 1772114513
+     0.00ns INFO     cocotb                             Seeding Python random module with 1772213098
      0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /home/aaiva/Coraltb/.env/lib/python3.12/site-packages/cocotb
      0.00ns INFO     cocotb                             Running tests
      0.00ns INFO     cocotb.regression                  running test_counter.test_counter_sanity (1/1)
-     0.00ns WARNING  py.warnings                        /home/aaiva/Git-Repos/RetroSoC/RetroSoC-Scratch/HDL-Skills/Amber_Bobby_/tb/test_counter.py:21: DeprecationWarning: The 'units' argument has been renamed to 'unit'.
+     0.00ns WARNING  py.warnings                        /home/aaiva/git-repos/RetroSoC-Scratch/HDL-Skills/Amber_Bobby_/tb/test_counter.py:21: DeprecationWarning: The 'units' argument has been renamed to 'unit'.
                                                           clock = Clock(uut.clk, 40, units="ns")
      0.00ns INFO     cocotb.counter_wtb                 Resetting Module
-  4840.00ns INFO     cocotb.counter_wtb                 Test Complete!
-  4840.00ns INFO     cocotb.regression                  test_counter.test_counter_sanity passed
-  4840.00ns INFO     cocotb.regression                  ******************************************************************************************
+  4760.00ns INFO     cocotb.counter_wtb                 Test Complete!
+  4760.00ns INFO     cocotb.regression                  test_counter.test_counter_sanity passed
+  4760.00ns INFO     cocotb.regression                  ******************************************************************************************
                                                         ** TEST                              STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
                                                         ******************************************************************************************
-                                                        ** test_counter.test_counter_sanity   PASS        4840.00           0.00    1044260.87  **
+                                                        ** test_counter.test_counter_sanity   PASS        4760.00           0.00    1169041.28  **
                                                         ******************************************************************************************
-                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                   4840.00           0.01     924091.01  **
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                   4760.00           0.00    1049127.01  **
                                                         ******************************************************************************************
-FST info: dumpfile /home/aaiva/Git-Repos/RetroSoC/RetroSoC-Scratch/HDL-Skills/Amber_Bobby_/tb_out/icarus/build/counter_wtb.fst opened for output.
+FST info: dumpfile /home/aaiva/git-repos/RetroSoC-Scratch/HDL-Skills/Amber_Bobby_/tb_out/icarus/build/counter_wtb.fst opened for output.
