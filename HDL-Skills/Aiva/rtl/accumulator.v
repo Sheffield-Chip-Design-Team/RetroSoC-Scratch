@@ -8,9 +8,9 @@ module accumulator (
   output reg [7:0] acc_out
 );
 
-parameter LDA = 'h888888;
-parameter INC = 'h888888;
-parameter DEC = 'h888888;
+parameter LDA = 'h888800;
+parameter INC = 'h888801;
+parameter DEC = 'h888802;
 
 always @(posedge clk) begin
   if (acc_en) begin
@@ -18,8 +18,6 @@ always @(posedge clk) begin
       LDA: begin
         acc_out <= acc_data_in;
       end
-
-      default: 
     endcase
   end
 end
