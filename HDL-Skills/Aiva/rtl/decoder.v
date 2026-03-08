@@ -1,24 +1,24 @@
 module decoder (
-  input wire rst,
-  input wire clk,
-  input wire op_rdy,
-  input [23:0] opcode,
-  output wire pc_en,
-  output wire load_en
+  input   wire        decoder_rst,
+  input   wire        clk,
+  input   wire  [7:0] opcode,
+  output  reg         pc_en,
+  output  reg         instr_en,
+  output  reg         data_buff_en
 ); 
 
-reg instr_done;
-assign pc_en = instr_done | !op_rdy;
+wire [3:0] HI_NIBBLE = opcode[7:4];
+wire [3:0] LO_NIBBLE = opcode[3:0];
 
 always @(posedge clk) begin
-  instr_done <= 0;
-  if (op_rdy) begin
-    case (opcode[23:16])
-      8'h00: begin // No Op
-        instr_done <= 1;
-      end
-      default: instr_done <= 0;
-    endcase
+  if (decoder_rst) begin
+    pc_en <= 1;
+    instr_en <= 1;
+    data_buff_en <= 0;
+  end else begin
+    if ((LO_NIBBLE == 9) && (HI_NIBBLE[0] == 0)) begin
+      data_buff_en <= 0;
+    end
   end
 end
 

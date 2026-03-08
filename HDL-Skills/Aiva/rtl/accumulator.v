@@ -5,6 +5,7 @@ module accumulator (
   input [23:0] opcode,
   input wire op_rdy,
   input wire [7:0] acc_data_in,
+  output [4:0] acc_status,
   output reg [7:0] acc_out
 );
 
