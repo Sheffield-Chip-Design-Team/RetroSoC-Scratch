@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1772114138" />
+    <testcase name="test_workshop_counter_sanity" classname="test_workshop_counter" file="/home/person/git_repos/retroSoC/RetroSoC-Scratch/HDL-Skills/Dima/TB/test_workshop_counter.py" lineno="18" time="0.008856773376464844" sim_time_ns="4600.0" ratio_time="519376.5047916442" />
+  </testsuite>
+</testsuites>

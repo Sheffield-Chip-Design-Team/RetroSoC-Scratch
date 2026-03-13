@@ -1,0 +1,96 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2009.vpi";
+S_0x57492f39c490 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x57492f39c620 .scope module, "workshop_counter_wtb" "workshop_counter_wtb" 3 6;
+ .timescale -9 -9;
+v0x57492f3ed390_0 .var "clk", 0 0;
+v0x57492f3ed450_0 .var "data_in", 3 0;
+v0x57492f3ed520_0 .net "data_out", 3 0, v0x57492f3ecf80_0;  1 drivers
+v0x57492f3ed620_0 .var "en", 0 0;
+v0x57492f3ed6f0_0 .var "load", 0 0;
+v0x57492f3ed7e0_0 .var "rst", 0 0;
+S_0x57492f3d7f90 .scope module, "dut" "workshop_counter" 3 16, 4 1 0, S_0x57492f39c620;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "rst";
+    .port_info 2 /INPUT 1 "en";
+    .port_info 3 /INPUT 1 "load";
+    .port_info 4 /INPUT 4 "data_in";
+    .port_info 5 /OUTPUT 4 "data_out";
+v0x57492f39c7b0_0 .net "clk", 0 0, v0x57492f3ed390_0;  1 drivers
+v0x57492f3ecea0_0 .net "data_in", 3 0, v0x57492f3ed450_0;  1 drivers
+v0x57492f3ecf80_0 .var "data_out", 3 0;
+v0x57492f3ed040_0 .net "en", 0 0, v0x57492f3ed620_0;  1 drivers
+v0x57492f3ed100_0 .net "load", 0 0, v0x57492f3ed6f0_0;  1 drivers
+v0x57492f3ed210_0 .net "rst", 0 0, v0x57492f3ed7e0_0;  1 drivers
+E_0x57492f39cb60 .event posedge, v0x57492f3ed210_0, v0x57492f39c7b0_0;
+S_0x57492f3d7de0 .scope module, "cocotb_iverilog_dump" "cocotb_iverilog_dump" 5 1;
+ .timescale -9 -9;
+S_0x57492f3ed8b0 .scope begin, "$unm_blk_7" "$unm_blk_7" 5 2, 5 2 0, S_0x57492f3d7de0;
+ .timescale -9 -9;
+v0x57492f3eda90_0 .var/str "dumpfile_path";
+    .scope S_0x57492f3d7f90;
+T_0 ;
+    %wait E_0x57492f39cb60;
+    %load/vec4 v0x57492f3ed040_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %load/vec4 v0x57492f3ed210_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.2, 8;
+    %pushi/vec4 0, 0, 4;
+    %assign/vec4 v0x57492f3ecf80_0, 0;
+    %jmp T_0.3;
+T_0.2 ;
+    %load/vec4 v0x57492f3ed100_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.4, 8;
+    %load/vec4 v0x57492f3ecea0_0;
+    %assign/vec4 v0x57492f3ecf80_0, 0;
+    %jmp T_0.5;
+T_0.4 ;
+    %load/vec4 v0x57492f3ecf80_0;
+    %addi 1, 0, 4;
+    %assign/vec4 v0x57492f3ecf80_0, 0;
+T_0.5 ;
+T_0.3 ;
+T_0.0 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0x57492f3d7de0;
+T_1 ;
+    %fork t_1, S_0x57492f3ed8b0;
+    %jmp t_0;
+    .scope S_0x57492f3ed8b0;
+t_1 ;
+    %vpi_func 5 3 "$value$plusargs" 32, "dumpfile_path=%s", v0x57492f3eda90_0 {0 0 0};
+    %cmpi/ne 0, 0, 32;
+    %jmp/0xz  T_1.0, 4;
+    %vpi_call/w 5 4 "$dumpfile", v0x57492f3eda90_0 {0 0 0};
+    %jmp T_1.1;
+T_1.0 ;
+    %vpi_call/w 5 6 "$dumpfile", "/home/person/git_repos/retroSoC/RetroSoC-Scratch/HDL-Skills/Dima/TB_out/icarus/build/workshop_counter_wtb.fst" {0 0 0};
+T_1.1 ;
+    %vpi_call/w 5 8 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x57492f39c620 {0 0 0};
+    %end;
+    .scope S_0x57492f3d7de0;
+t_0 %join;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 6;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/home/person/git_repos/retroSoC/RetroSoC-Scratch/HDL-Skills/Dima/TB/workshop_counter_wtb.v";
+    "/home/person/git_repos/retroSoC/RetroSoC-Scratch/HDL-Skills/Dima/RTL/workshop_counter.v";
+    "/home/person/git_repos/retroSoC/RetroSoC-Scratch/HDL-Skills/Dima/TB_out/icarus/build/cocotb_iverilog_dump.v";

@@ -1,0 +1,67 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2009.vpi";
+S_0x64682c9dc590 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x64682c9dc720 .scope module, "data_bus_buffer_wtb" "data_bus_buffer_wtb" 3 6;
+ .timescale -9 -9;
+v0x64682c9e7f30_0 .var "clk", 0 0;
+v0x64682c9e7ff0_0 .var "data_buff_en", 0 0;
+v0x64682c9e8090_0 .var "data_bus", 7 0;
+v0x64682c9e8160_0 .net "inter_data_bus", 7 0, L_0x64682c9e85a0;  1 drivers
+v0x64682c9e8230_0 .var "rst", 0 0;
+S_0x64682c9ca730 .scope module, "dut" "data_bus_buffer" 3 15, 4 1 0, S_0x64682c9dc720;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "rst";
+    .port_info 2 /INPUT 8 "data_bus";
+    .port_info 3 /INPUT 1 "data_buff_en";
+    .port_info 4 /INOUT 8 "inter_data_bus";
+o0x7fb81f8af018 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+; Elide local net with no drivers, v0x64682c9a1330_0 name=_ivl_0
+v0x64682c9e7a60_0 .net "clk", 0 0, v0x64682c9e7f30_0;  1 drivers
+v0x64682c9e7b20_0 .net "data_buff_en", 0 0, v0x64682c9e7ff0_0;  1 drivers
+v0x64682c9e7bc0_0 .net "data_bus", 7 0, v0x64682c9e8090_0;  1 drivers
+v0x64682c9e7ca0_0 .net "inter_data_bus", 7 0, L_0x64682c9e85a0;  alias, 1 drivers
+v0x64682c9e7dd0_0 .net "rst", 0 0, v0x64682c9e8230_0;  1 drivers
+L_0x64682c9e85a0 .functor MUXZ 8, o0x7fb81f8af018, v0x64682c9e8090_0, v0x64682c9e7ff0_0, C4<>;
+S_0x64682c9ca5a0 .scope module, "cocotb_iverilog_dump" "cocotb_iverilog_dump" 5 1;
+ .timescale -9 -9;
+S_0x64682c9e8320 .scope begin, "$unm_blk_29" "$unm_blk_29" 5 2, 5 2 0, S_0x64682c9ca5a0;
+ .timescale -9 -9;
+v0x64682c9e8500_0 .var/str "dumpfile_path";
+    .scope S_0x64682c9ca5a0;
+T_0 ;
+    %fork t_1, S_0x64682c9e8320;
+    %jmp t_0;
+    .scope S_0x64682c9e8320;
+t_1 ;
+    %vpi_func 5 3 "$value$plusargs" 32, "dumpfile_path=%s", v0x64682c9e8500_0 {0 0 0};
+    %cmpi/ne 0, 0, 32;
+    %jmp/0xz  T_0.0, 4;
+    %vpi_call/w 5 4 "$dumpfile", v0x64682c9e8500_0 {0 0 0};
+    %jmp T_0.1;
+T_0.0 ;
+    %vpi_call/w 5 6 "$dumpfile", "/home/aaiva/Git-Repos/RetroSoC/RetroSoC-Scratch/HDL-Skills/Aiva/tb_out/icarus/build/data_bus_buffer_wtb.fst" {0 0 0};
+T_0.1 ;
+    %vpi_call/w 5 8 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x64682c9dc720 {0 0 0};
+    %end;
+    .scope S_0x64682c9ca5a0;
+t_0 %join;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 6;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/home/aaiva/Git-Repos/RetroSoC/RetroSoC-Scratch/HDL-Skills/Aiva/tb/data_bus_buffer_wtb.v";
+    "/home/aaiva/Git-Repos/RetroSoC/RetroSoC-Scratch/HDL-Skills/Aiva/rtl/data_bus_buffer.v";
+    "/home/aaiva/Git-Repos/RetroSoC/RetroSoC-Scratch/HDL-Skills/Aiva/tb_out/icarus/build/cocotb_iverilog_dump.v";
